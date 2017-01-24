@@ -2,32 +2,33 @@
 driver:
   name: vagrant
 
-## The forwarded_port port feature lets you connect to ports on the VM guest via
-## localhost on the host.
-## see also: https://docs.vagrantup.com/v2/networking/forwarded_ports.html
-
-#  network:
-#    - ["forwarded_port", {guest: 80, host: 8080}]
-
 provisioner:
   name: policyfile_zero
 
-## require_chef_omnibus specifies a specific chef version to install. You can
-## also set this to `true` to always use the latest version.
-## see also: https://docs.chef.io/config_yml_kitchen.html
-
-#  require_chef_omnibus: 12.8.1
-
 verifier:
-  name: inspec
+  name: inspec_tests
+
 
 platforms:
   - name: ubuntu-16.04
-  - name: centos-7.2
+  - name: windows2016
+    driver_config: mwrock/Windows2016
 
 suites:
-  - name: default
+  - name: master
+    includes:
+      - ubuntu-16.04
+    provisioner:
+      policyfile_path: jenkins-master.rb
     verifier:
       inspec_tests:
-        - test/smoke/default
-    attributes:
+        - test/integration/master
+
+  - name: agent
+    includes:
+      - windows2016
+    provisioner:
+      policyfile_path: jenkins-agent.rb
+    verifier:
+      inspec_tests:
+        - test/integration/agent
