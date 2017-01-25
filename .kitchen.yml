@@ -6,29 +6,29 @@ provisioner:
   name: policyfile_zero
 
 verifier:
-  name: inspec_tests
+  name: inspec
 
 
 platforms:
   - name: ubuntu-16.04
   - name: windows2016
-    driver_config: mwrock/Windows2016
+    driver_config: 
+      box: mwrock/Windows2016
 
 suites:
   - name: master
     includes:
       - ubuntu-16.04
     provisioner:
-      policyfile_path: jenkins-master.rb
+      policyfile: jenkins-master.rb
     verifier:
       inspec_tests:
         - test/integration/master
-
   - name: agent
     includes:
       - windows2016
     provisioner:
-      policyfile_path: jenkins-agent.rb
+      policyfile: jenkins-agent.rb
     verifier:
       inspec_tests:
         - test/integration/agent

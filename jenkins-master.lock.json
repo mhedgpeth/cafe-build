@@ -1,0 +1,280 @@
+{
+  "revision_id": "0f8b261d695a1fed489c9cc4cf0247df87c632ad51ea88b87f50779a1e4afa05",
+  "name": "jenkins-master",
+  "run_list": [
+    "recipe[cafe-build::master]"
+  ],
+  "cookbook_locks": {
+    "cafe-build": {
+      "version": "0.1.0",
+      "identifier": "bd2e0f899c390dc49d4fe983667276472926917e",
+      "dotted_decimal_identifier": "53249414866417933.55342061980968562.130048005149054",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/mhedgpeth/cafe-build.git",
+        "revision": "d2fd3fab1f1cda9a3ed60eb19de2c7aafb064bf9",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    },
+    "docker": {
+      "version": "2.13.11",
+      "identifier": "4fd9047468dc3c26446e291b8b8720c041b42311",
+      "dotted_decimal_identifier": "22475136316267580.10771289041767303.36010108134161",
+      "cache_key": "docker-2.13.11-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/2.13.11/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/2.13.11/download",
+        "version": "2.13.11"
+      }
+    },
+    "jenkins": {
+      "version": "4.2.1",
+      "identifier": "6c4ef85076edb7e3ea35e34ddb9233f139a81392",
+      "dotted_decimal_identifier": "30486125893578167.64152336881015698.57111147451282",
+      "cache_key": "jenkins-4.2.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/jenkins/versions/4.2.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/jenkins/versions/4.2.1/download",
+        "version": "4.2.1"
+      }
+    },
+    "windows": {
+      "version": "2.1.1",
+      "identifier": "a303fabd4290e471f52e27ca38494a2babcce611",
+      "dotted_decimal_identifier": "45884796655800548.32076250953168969.81551426381329",
+      "cache_key": "windows-2.1.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/windows/versions/2.1.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/windows/versions/2.1.1/download",
+        "version": "2.1.1"
+      }
+    },
+    "chocolatey": {
+      "version": "1.1.0",
+      "identifier": "91ecf992b04f241a2cc3a1937964c5bb1d63ba6b",
+      "dotted_decimal_identifier": "41074428275085092.7367568135518564.217407442631275",
+      "cache_key": "chocolatey-1.1.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/chocolatey/versions/1.1.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/chocolatey/versions/1.1.0/download",
+        "version": "1.1.0"
+      }
+    },
+    "apt": {
+      "version": "5.0.1",
+      "identifier": "e0c1e734bc812d775eb26c41662628969d13eee1",
+      "dotted_decimal_identifier": "63263593549562157.33599642641983014.44627345534689",
+      "cache_key": "apt-5.0.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/apt/versions/5.0.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/apt/versions/5.0.1/download",
+        "version": "5.0.1"
+      }
+    },
+    "runit": {
+      "version": "3.0.4",
+      "identifier": "23df69e1de5aa22b58479eeb7def53b619ca9750",
+      "dotted_decimal_identifier": "10097270038878882.12200488630713839.92041581860688",
+      "cache_key": "runit-3.0.4-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/runit/versions/3.0.4/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/runit/versions/3.0.4/download",
+        "version": "3.0.4"
+      }
+    },
+    "compat_resource": {
+      "version": "12.16.3",
+      "identifier": "ee0005d802b7faad3584425961e9937962c8d65e",
+      "dotted_decimal_identifier": "66991069556029434.48754013136052713.162149557655134",
+      "cache_key": "compat_resource-12.16.3-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/compat_resource/versions/12.16.3/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/compat_resource/versions/12.16.3/download",
+        "version": "12.16.3"
+      }
+    },
+    "packagecloud": {
+      "version": "0.2.5",
+      "identifier": "f9258a5f43fd862337574661ade9e3e5fa81abfb",
+      "dotted_decimal_identifier": "70128545434959238.9912472167362025.250576889818107",
+      "cache_key": "packagecloud-0.2.5-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/packagecloud/versions/0.2.5/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/packagecloud/versions/0.2.5/download",
+        "version": "0.2.5"
+      }
+    },
+    "yum-epel": {
+      "version": "2.1.1",
+      "identifier": "f70f93b0f7533c1261a89b1ab18f7a4eb15b36c9",
+      "dotted_decimal_identifier": "69541446251139900.5173926365409679.134478401582793",
+      "cache_key": "yum-epel-2.1.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/yum-epel/versions/2.1.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/yum-epel/versions/2.1.1/download",
+        "version": "2.1.1"
+      }
+    },
+    "ohai": {
+      "version": "4.2.3",
+      "identifier": "20d9cd82c42bf449a33c37673a7f3e0b71ad6f35",
+      "dotted_decimal_identifier": "9246675940158452.20727152322755199.68218872753973",
+      "cache_key": "ohai-4.2.3-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/ohai/versions/4.2.3/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/ohai/versions/4.2.3/download",
+        "version": "4.2.3"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "cafe-build",
+        ">= 0.0.0"
+      ],
+      [
+        "docker",
+        "= 2.13.11"
+      ],
+      [
+        "jenkins",
+        "= 4.2.1"
+      ],
+      [
+        "windows",
+        "= 2.1.1"
+      ],
+      [
+        "chocolatey",
+        "= 1.1.0"
+      ],
+      [
+        "apt",
+        "= 5.0.1"
+      ],
+      [
+        "runit",
+        "= 3.0.4"
+      ],
+      [
+        "compat_resource",
+        "= 12.16.3"
+      ],
+      [
+        "packagecloud",
+        "= 0.2.5"
+      ],
+      [
+        "yum-epel",
+        "= 2.1.1"
+      ],
+      [
+        "ohai",
+        "= 4.2.3"
+      ]
+    ],
+    "dependencies": {
+      "docker (2.13.11)": [
+        [
+          "compat_resource",
+          ">= 12.16.2"
+        ]
+      ],
+      "jenkins (4.2.1)": [
+        [
+          "runit",
+          ">= 1.7.0"
+        ],
+        [
+          "compat_resource",
+          ">= 12.16.3"
+        ]
+      ],
+      "windows (2.1.1)": [
+        [
+          "ohai",
+          ">= 4.0.0"
+        ]
+      ],
+      "chocolatey (1.1.0)": [
+        [
+          "windows",
+          ">= 1.38.0"
+        ]
+      ],
+      "apt (5.0.1)": [
+        [
+          "compat_resource",
+          ">= 12.16.3"
+        ]
+      ],
+      "runit (3.0.4)": [
+        [
+          "packagecloud",
+          ">= 0.0.0"
+        ],
+        [
+          "yum-epel",
+          ">= 0.0.0"
+        ]
+      ],
+      "compat_resource (12.16.3)": [
+
+      ],
+      "packagecloud (0.2.5)": [
+
+      ],
+      "yum-epel (2.1.1)": [
+        [
+          "compat_resource",
+          ">= 12.16.3"
+        ]
+      ],
+      "ohai (4.2.3)": [
+        [
+          "compat_resource",
+          ">= 12.14.7"
+        ]
+      ],
+      "cafe-build (0.1.0)": [
+        [
+          "docker",
+          "~> 2.13.10"
+        ],
+        [
+          "jenkins",
+          ">= 0.0.0"
+        ],
+        [
+          "windows",
+          ">= 0.0.0"
+        ],
+        [
+          "chocolatey",
+          ">= 0.0.0"
+        ],
+        [
+          "apt",
+          ">= 0.0.0"
+        ]
+      ]
+    }
+  }
+}

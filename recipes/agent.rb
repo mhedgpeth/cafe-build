@@ -1,10 +1,8 @@
-
-# install windows container feature
-cookbook 'chocolatey'
+include_recipe 'chocolatey'
 
 chocolatey 'dotnetcore'
 chocolatey 'cake.portable'
 
-windows_feature 'containers' do
-  action :install
-end
+# windows_feature 'containers' do
+#   action :install
+# end
