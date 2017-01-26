@@ -1,10 +1,3 @@
-
-
-# docker_image 'jenkins' do
-#   action :pull
-# end
-
-
 include_recipe 'apt'
 package 'curl'
 package 'linux-image-extra-4.4.0-51-generic'
@@ -25,8 +18,12 @@ package 'docker-engine'
 directory '/var/jenkins_home' do
   owner 'root'
   group 'root'
-  mode '1000'
+  mode '1777'
   action :create
+end
+
+docker_image 'jenkins' do
+  action :pull
 end
 
 docker_container 'jenkins' do
@@ -35,14 +32,3 @@ docker_container 'jenkins' do
   volumes ['/var/jenkins_home:/var/jenkins_home']
   action :run_if_missing
 end
-
-# docker_installation_package 'default' do
-#   # version '1.8.3'
-#   action :create
-#   package_options %q|--force-yes -o Dpkg::Options::='--force-confold' -o Dpkg::Options::='--force-all'| # if Ubuntu for example
-# end
-
-# docker_service 'jenkins' do
-#   action [:create, :start]
-# end
-

@@ -1,14 +1,14 @@
 {
-  "revision_id": "7784132c1ead48a7d0d89b7b0125a1ebe4b392dd336707d1030e185c81a7c38a",
-  "name": "jenkins-master",
+  "revision_id": "9cd2f9666f7258d44e795d762af2b4d2710e08c8e8e33daa7d688b9785a20aa9",
+  "name": "jenkins-agent",
   "run_list": [
-    "recipe[cafe-build::master]"
+    "recipe[cafe-build::agent]"
   ],
   "cookbook_locks": {
     "cafe-build": {
       "version": "0.1.0",
-      "identifier": "ad0528de2f2a2227316eb2986f4c808da38a1969",
-      "dotted_decimal_identifier": "48700844055407138.11031875604213580.141345822480745",
+      "identifier": "920bc04b4104b011e337f26e64ed90d9e256195f",
+      "dotted_decimal_identifier": "41108267123934384.5034904034108653.159265479596383",
       "source": ".",
       "cache_key": null,
       "scm_info": {
